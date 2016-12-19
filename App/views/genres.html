@@ -1,0 +1,30 @@
+﻿<div>
+    <div class="page-header">
+        <h2 class="movie-data" style="text-align:center;padding-top:30px">GENRES</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-2">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Genres Name:</span>
+                    <input type="text" id="genresTitle" class="form-control" data-bind="value : searchText" aria-describedby="basic-addon1" placeholder="Genres name" />
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-default" id="searchBtn" data-bind="click: searchGenres, disable : searchTextGood"><i class="fa fa-search"></i></button>
+                <button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearGenres"><i class="fa fa-trash-o"></i></button>
+            </div>
+        </div>
+        <hr />
+        <div class="row" data-bind="foreach: genres">
+            <div class="col-md-4 col-sm-6">
+                <div>
+                    <h4 style="color: black">
+                        <i class="fa fa-video-camera"></i> <a data-bind="attr: { href : '/index.html#genreDetails/'+genreID}, text: genreName"></a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>
+    </div>
+</div>

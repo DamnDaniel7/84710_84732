@@ -1,0 +1,244 @@
+﻿<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1 id="homeHeading">Your Source Of Movies</h1>
+            <hr>
+            <p>Within one cick distance you can access all your favorite Movies, Actors, Directors and search them by the Genre, Language or even the Country!!</p>
+            <a href="#services" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+        </div>
+    </div>
+</header>
+
+<section class="no-padding" style="background-color:#070606">
+    <div class="container-fluid">
+        <h2 style="text-align:center">HOTSPOT</h2>
+        <div class="row no-gutter popup-gallery">
+            <div class="col-lg-6 col-sm-12">
+                <a data-toggle="modal" data-target="#myModal-actor" class="portfolio-box" data-bind="foreach: actor">
+                    <div data-bind="html: '<img src= '+photo+' class=img-responsive />'"></div>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Actor
+                            </div>
+                            <div class="project-name">
+                                <span data-bind="text: actorName"></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <a data-toggle="modal" data-target="#myModal-director" class="portfolio-box" data-bind="foreach: director">
+                    <div data-bind="html: '<img src= '+photo+' class=img-responsive />'"></div>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Director
+                            </div>
+                            <div class="project-name">
+                                <span data-bind="text: directorName"></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-sm-12">
+                <a data-toggle="modal" data-target="#myModal-movie" class="portfolio-box" data-bind="foreach: movies">
+                    <div data-bind="html: '<img src= '+poster+' class=img-responsive width=100% />'"></div>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Movies
+                            </div>
+                            <div class="project-name">
+                                <span data-bind="text: movie_title"></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading; movie-data">At Your Service</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <a href="index.html#movies">
+                        <i class="fa fa-4x fa-film text-primary sr-icons"></i>
+                        <h3 class="movie-data">Movies</h3>
+                        <p class="text-muted">Search by the Movie</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <a href="index.html#actors">
+                        <i class="fa fa-4x fa-users text-primary sr-icons"></i>
+                        <h3 class="movie-data">Actors</h3>
+                        <p class="text-muted">Search by the Actor</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <a href="index.html#directors">
+                        <i class="fa fa-4x fa-bullhorn text-primary sr-icons"></i>
+                        <h3 class="movie-data">Directors</h3>
+                        <p class="text-muted">Search by the Director</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <a href="index.html#genres">
+                        <i class="fa fa-4x fa-video-camera text-primary sr-icons"></i>
+                        <h3 class="movie-data">Genres</h3>
+                        <p class="text-muted">Search by the Genre</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:20px;">
+            <div class="col-lg-6 col-md-6 text-center">
+                <div class="service-box">
+                    <a href="index.html#countries">
+                        <i class="fa fa-4x fa-globe text-primary sr-icons"></i>
+                        <h3 class="movie-data">Countries</h3>
+                        <p class="text-muted">Search by the Country</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 text-center">
+                <div class="service-box">
+                    <a href="index.html#languages">
+                        <i class="fa fa-4x fa-language text-primary sr-icons"></i>
+                        <h3 class="movie-data">Languages</h3>
+                        <p class="text-muted">Search by the Language</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="bg-primary" style="padding-top:100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">ITW Mobile App!</h2>
+                <hr class="light">
+            </div>
+            <div class="col-lg-6 text-center">
+                <p>
+                    Daniel Oliveira Teixeira<br />
+                    <span class="text-faded">NMECº 84710</span>
+            </div>
+            <div class="col-lg-6 text-center">
+                <p>
+                João Abílio Rodrigues<br />
+                    <span class="text-faded">NMECº 84732</span>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="myModal-actor" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title" style="color:black; text-align:center">Actor Sneak Peek:</h3>
+            </div>
+            <div class="modal-body" style="text-align:center">
+                <div data-bind="foreach: actor">
+                    <div data-bind="html: '<img src= '+photo+' width=50% />'"></div>
+                </div>
+                <div>
+                    <div data-bind="foreach: actor">
+                        <h3 class="movie-data">
+                            Name:
+                            <span data-bind="text: actorName"></span>
+                        </h3>
+                    </div>
+                    <div data-bind="foreach: actor">
+                        <h3 class="movie-data">
+                            <i class="fa fa-facebook-square"></i>Facebook Likes:
+                            <span data-bind="text: actorFacebookLikes"></span>
+                            <i class="fa fa-thumbs-o-up"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal-director" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title" style="color:black; text-align:center">Director Sneak Peek:</h3>
+            </div>
+            <div class="modal-body" style="text-align:center">
+                <div data-bind="foreach: director">
+                    <div data-bind="html: '<img src= '+photo+' width=50% />'"></div>
+                </div>
+                <div>
+                    <div data-bind="foreach: director">
+                        <h3 class="movie-data">
+                            Name:
+                            <span data-bind="text: directorName"></span>
+                        </h3>
+                    </div>
+                    <div data-bind="foreach: director">
+                        <h3 class="movie-data">
+                            <i class="fa fa-facebook-square"></i>Facebook Likes:
+                            <span data-bind="text: directorFacebookLikes"></span>
+                            <i class="fa fa-thumbs-o-up"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal-movie" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title" style="color:black; text-align:center">Movie Sneak Peek:</h3>
+            </div>
+            <div class="modal-body" style="text-align:center">
+                <div data-bind="foreach: movies">
+                    <div data-bind="html: '<img src= '+poster+' width=50% />'"></div>
+                </div>
+                <div>
+                    <div data-bind="foreach: movies">
+                        <h3 class="movie-data">
+                            Title:
+                            <span data-bind="text: movie_title"></span>
+                        </h3>
+                    </div>
+                    <div data-bind="foreach: movies">
+                        <h3 class="movie-data">
+                            <i class="fa fa-facebook-square"></i>Facebook Likes:
+                            <span data-bind="text: movie_facebook_likes"></span>
+                            <i class="fa fa-thumbs-o-up"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿<div class="content-container" style="height:300px">
+    <div class="img-container"></div>
+    <div class="blur"></div>
+    <div class="content-image" style="text-align:center">
+        <div class="col-lg-12" data-bind="foreach: countryInfo" style="text-align:center">
+            <h2 style="text-decoration:underline"><span data-bind="text: countryName"></span></h2>
+            <br />
+            <h3>
+                Number of Movies:
+                <span data-bind="text: moviesCount"></span>
+            </h3>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12">
+    <div class="col-lg-4" data-bind="foreach: countryInfo" style="text-align:center">
+        <h3 class="movie-data"><span data-bind="text: countryName"></span>'s Filmography:</h3>
+        <hr />
+    </div>
+    <table class="table table-striped" data-bind="foreach: countryInfo">
+        <thead>
+            <tr>
+                <th class="col-lg-4">Title</th>
+                <th class="col-lg-2">Year<i class='fa fa-calendar'></i></th>
+                <th class="col-lg-2">Score<i class='fa fa-imdb'></i></th>
+                <th class="col-lg-4">IMDb<i class='fa fa-link'></i></th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: movies">
+            <tr>
+                <th><a data-bind="attr: { href : '/index.html#movieDetails/'+movieID}, text: $index()+1 + '. ' + movie_title"></a></th>
+                <th data-bind="text: title_year"></th>
+                <th data-bind="text: imdb_score"></th>
+                <th><a class="link" data-bind="attr: {href: 'movie_imdb_link'},text: movie_imdb_link"></a></th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+

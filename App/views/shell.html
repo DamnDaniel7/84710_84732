@@ -1,0 +1,21 @@
+﻿    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <i class="fa fa-2x fa-imdb" aria-hidden="true"></i>
+                    <span>IMDb</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" data-bind="foreach: router.navigationModel">
+                    <li data-bind="css: { active: isActive }">
+                        <a data-bind="attr: { href: hash, title: title }, text: menu"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="page-host" data-bind="router: { transition:'entrance' }"></div>

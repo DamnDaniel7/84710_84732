@@ -1,0 +1,56 @@
+﻿<div class="content-container" style="height:auto;padding-bottom:100px">
+    <div class="img-container"></div>
+    <div class="blur"></div>
+    <div class="content-image">
+        <div class="col-lg-5" data-bind="foreach: actorInfo">
+            <div data-bind="html: '<img src= '+photo+' width=100% />'"></div>
+        </div>
+        <div class="col-lg-7">
+            <h1 style="text-decoration:underline;font-weight:bold;text-align:center">Actor Details:</h1>
+            <br />
+            <div data-bind="foreach: actorInfo">
+                <h3>
+                    Name:
+                    <span class="text-faded" data-bind="text: actorName"></span>
+                </h3>
+            </div>
+            <div style="height:100px"></div>
+            <div data-bind="foreach: actorInfo">
+                <h3>
+                    <i class="fa fa-facebook-square"></i>Facebook Likes:
+                    <span class="text-faded" data-bind="text: actorFacebookLikes"></span>
+                    <i class="fa fa-thumbs-o-up"></i>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <div class="col-lg-12">
+        <h3 class="movie-data" style="text-align:center">Actor Filmography:</h3>
+        <hr />
+    </div>
+    <table class="table table-striped" data-bind="foreach: actorInfo">
+        <thead>
+            <tr>
+                <th class="col-lg-4 col-md-4 col-sm-12 col-xs-12">Title</th>
+                <th class="col-lg-2 col-md-2 col-sm-12 col-xs-12">Year<i class='fa fa-calendar'></i></th>
+                <th class="col-lg-2 col-md-2 col-sm-12 col-xs-12">Score<i class='fa fa-imdb'></i></th>
+                <th class="col-lg-4 col-md-4 col-sm-12 col-xs-12">IMDb<i class='fa fa-link'></i></th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: actor_movies">
+            <tr>
+                <th><a data-bind="attr: { href : '/index.html#movieDetails/'+movieID}, text: $index()+1 + '. ' + movie_title"></a></th>
+                <th data-bind="text: title_year"></th>
+                <th data-bind="text: imdb_score"></th>
+                <th><a class="link" data-bind="attr: {href: 'movie_imdb_link'},text: movie_imdb_link"></a></th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
